@@ -16,15 +16,17 @@ cardElement.setAttribute("data-card", cards[i]);
 
 cardElement.addEventListener("click", isTwoCards);
 
+console.log("Board created!")
+
 board.appendChild(cardElement);
 	}
 }
 function isTwoCards()	{
 	cardsInPlay.push(this.getAttribute("data-card"));
 		if (this.getAttribute("data-card") === "queen") {
-			this.innerHTML = "<img src='http://i.imgur.com/hLACgY7.png'>";
+			this.innerHTML ="<img src='http://i.imgur.com/hLACgY7.png'>";
 		}	else {
-			this.innerHTML = "<img src='http://i.imgur.com/Stl0BZa.png'>";
+			this.innerHTML ="<img src='http://i.imgur.com/Stl0BZa.png'>";
 		}
 	if (cardsInPlay.length === 2) {
 		isMatch(cardsInPlay);
@@ -33,8 +35,8 @@ function isTwoCards()	{
 }
 function isMatch(cards) {
 	if (cards[0] === cards[1]) {
-		alert("You found a match!");
-		else {
+		alert("You found a match!"); 
+	} else {
 		alert("Sorry, try again.");
 		}
 	}
